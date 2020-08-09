@@ -9,6 +9,7 @@ class App extends React.Component {
       cars: data.cars,
       model: "",
       sort: "",
+      Year:""
     };
   }
   sortCarsBytimeLine = (event) => {
@@ -35,7 +36,7 @@ class App extends React.Component {
     }));
   };
   filterCarsBymodel = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     if (event.target.value === "") {
       this.setState({ model: event.target.value, cars: data.cars });
     } else {
@@ -47,6 +48,20 @@ class App extends React.Component {
       });
     }
   };
+  filterCarsByYear = (event) => {
+    // console.log(event.target.value)
+    if (event.target.value === "") {
+      this.setState({ Year: event.target.value, cars: data.cars });
+    } else {
+      this.setState({
+        Year: event.target.value,
+        cars: data.cars.filter(
+          (car) => car.Year.indexOf(event.target.value) >= 0
+        ),
+      });
+    }
+  };
+ 
   render() {
     return (
       
@@ -63,6 +78,7 @@ class App extends React.Component {
                 sort={this.state.sort}
                 filterCarsBymodel={this.filterCarsBymodel}
                 sortCarsBytimeLine={this.sortCarsBytimeLine}
+                filterCarsByYear={this.filterCarsByYear}
               ></Filter>
               <Cars cars={this.state.cars}></Cars>
             </div>

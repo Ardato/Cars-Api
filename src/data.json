@@ -6,7 +6,7 @@
       "image": "/images/honda-civic-si-coupe.jpg",
       "Year": "2019",
       "price": 100000,
-      "availableModel": ["HONDA"]
+      "availableModel": "HONDA"
     },
     {
       "model": "honda accord",
@@ -14,7 +14,7 @@
       "image": "/images/honda accord.jpg",
       "Year": "2020",
       "price": 140000,
-      "availableModel": ["HONDA"]
+      "availableModel": "HONDA"
     },
     {
       "model": "toyota-rav4",
@@ -22,7 +22,7 @@
       "image": "https://www.automag.co.il/wp-content/uploads/2018/03/toyota-rav4-eu-05.jpg",
       "Year": "2019",
       "price": 90000,
-      "availableModel": ["TOYOTA"]
+      "availableModel": "TOYOTA"
     },
     {
       "model": "toyota corolla.jpg",
@@ -30,7 +30,7 @@
       "image": "/images/toyota corolla.jpg",
       "Year": "2010",
       "price": 27000,
-      "availableModel": ["TOYOTA"]
+      "availableModel": "TOYOTA"
     },
     {
       "model": "ferrari_488 pista",
@@ -38,7 +38,7 @@
       "image": "/images/ferrari_488pista.jpg",
       "Year": "2020",
       "price": 500000,
-      "availableModel": ["FERRARI"]
+      "availableModel": "FERRARI"
     },
     {
       "model": "ferrari_f8_tributo",
@@ -46,7 +46,7 @@
       "image": "/images/ferrari_f8_tributo.jpg",
       "Year": "2020",
       "price": 500000,
-      "availableModel": ["FERRARI"]
+      "availableModel": "FERRARI"
     },
     {
       "model": "hyundai",
@@ -54,7 +54,7 @@
       "image": "/images/hyundai.jpg",
       "Year": "2012",
       "price": 28000,
-      "availableModel": ["HYUNDAI"]
+      "availableModel": "HYUNDAI"
     },
     {
       "model": "Hyundai-venue-new-Front",
@@ -62,7 +62,7 @@
       "image": "https://www.icar.co.il/_media/images/models/new/hyundai/venue/new/Hyundai-venue-new-Front.jpg",
       "Year": "2019",
       "price": 79000,
-      "availableModel": ["HYUNDAI"]
+      "availableModel": "HYUNDAI"
     },
     {
       "model": "mazda-CX5-new-Front",
@@ -70,7 +70,7 @@
       "image": "https://www.icar.co.il/_media/images/models/new/mazda/cx5/new/mazda-CX5-new-Front.jpg",
       "Year": "2018",
       "price": 88000,
-      "availableModel": ["MAZDA"]
+      "availableModel": "MAZDA"
     },
     {
       "model": "Mazda-CX-30",
@@ -78,7 +78,7 @@
       "image": "https://www.cartube.co.il/images/stories/mazda/cx-30/2019/Mazda-CX-30-2020-1600-17-970px.jpg",
       "Year": "2020",
       "price": 142000,
-      "availableModel": ["MAZDA"]
+      "availableModel": "MAZDA"
     },
     {
       "model": "mercedes-E-class-new-Front",
@@ -86,7 +86,7 @@
       "image": "https://www.icar.co.il/_media/images/models/new/mercedes/e-class/new/mercedes-E-class-new-Front.jpg",
       "Year": "2017",
       "price": 100000,
-      "availableModel": ["MERCEDES"]
+      "availableModel": "MERCEDES"
     },
     {
       "model": "mercedes C-300",
@@ -94,7 +94,7 @@
       "image": "https://www.mercedes-benz.co.il/wp-content/uploads/configurator/C%20Class/C300e/Harmony/day/040-2.jpg",
       "Year": "2019",
       "price": 200000,
-      "availableModel": ["MERCEDES"]
+      "availableModel": "MERCEDES"
     },
     {
       "model": "Opel Astra K",
@@ -102,7 +102,7 @@
       "image": "/images/Opel.jpg",
       "Year": "2019",
       "price": 29000,
-      "availableModel": ["OPEL"]
+      "availableModel": "OPEL"
     },
     {
       "model": "Opel iCar",
@@ -110,7 +110,7 @@
       "image": "https://www.icar.co.il/_media/images/models/new/opel/corsa/new/opel-corsa-new-Front.jpg",
       "Year": "2018",
       "price": 28000,
-      "availableModel": ["OPEL"]
+      "availableModel": "OPEL"
     },
     {
       "model": "Seat Ateca",
@@ -118,7 +118,7 @@
       "image": "/images/seat.jpg",
       "Year": "2011",
       "price": 23000,
-      "availableModel": ["SEAT"]
+      "availableModel": "SEAT"
       
     },
     {
@@ -127,7 +127,7 @@
       "image": "https://www.cartube.co.il/images/stories/seat/leon/2020/IPP-All-new-SEAT-Leon_45_HQ-970px.jpg",
       "Year": "2019",
       "price": 80000,
-      "availableModel": ["SEAT"]
+      "availableModel": "SEAT"
     },
     {
       "model": "subaru-forester",
@@ -135,7 +135,7 @@
       "image": "https://www.icar.co.il/_media/images/models/new/subaru/forester/2013/subaru-forester-2013-Front.jpg",
       "Year": "2013",
       "price": 25000,
-      "availableModel": ["SUBARU"]
+      "availableModel": "SUBARU"
     },
     {
       "model": "Subaru-Ascent",
@@ -143,7 +143,7 @@
       "image": "https://www.cartube.co.il/images/stories/subaru/ascent/2017/2019-Subaru-Ascent-970px.jpg",
       "Year": "2012",
       "price": 22000,
-      "availableModel": ["SUBARU"]
+      "availableModel": "SUBARU"
     },
     {
       "model": "suzuki-sx4",
@@ -151,7 +151,7 @@
       "image": "https://www.cartube.co.il/images/phocagallery/suzuki/sx4/sx4-2013/thumbs/phoca_thumb_l_suzuki-sx4_2014__11.jpg",
       "Year": "2020",
       "price": 105000,
-      "availableModel": ["Suzuki"]
+      "availableModel": "Suzuki"
     },
     {
       "model": "suzuki-baleno-new-Extra",
@@ -159,7 +159,7 @@
       "image": "https://www.icar.co.il/_media/images/models/new/suzuki/baleno/new/suzuki-baleno-new-Extra.jpg",
       "Year": "2016",
       "price": 28000,
-      "availableModel": ["Suzuki"]
+      "availableModel": "Suzuki"
     }
   ]
 }

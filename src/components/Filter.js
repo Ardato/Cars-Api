@@ -5,18 +5,35 @@ const Filter = ({
   count,
   model,
   sort,
+  filterCarsByYear
 }) => {
   return (
     <div className="filter">
       <div className="filter-result">{count} Cars</div>
       <div className="filter-sort">
-        Filter cars by timeline{" "}
+        Sort by timeline{" "}
         <select value={sort} onChange={sortCarsBytimeLine}>
           <option>select</option>
           <option value="Old">Old</option>
           <option value="New">New</option>
         </select>
+       
       </div>
+      <div className="filter-by-year">
+      Filter by Year{" "}
+        <select  onChange={filterCarsByYear}>
+          <option>select</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+        </select>
+      </div>
+
       <div className="filter-model">
         Filter cars by model{" "}
         <select value={model} onChange={filterCarsBymodel}>
