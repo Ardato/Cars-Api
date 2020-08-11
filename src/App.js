@@ -9,15 +9,14 @@ class App extends React.Component {
       cars: data.cars,
       model: "",
       sort: "",
-      Year:""
+      Year: "",
     };
   }
-  sortCarsBytimeLine = (event) => {
-      
+  sortCarsByYear = (event) => {
     const sort = event.target.value;
     //console.log(event.target.value);
-    this.setState((state) => ({
-       sort,
+    this.setState(() => ({
+      sort,
       cars: this.state.cars
         .slice()
         .sort((a, b) =>
@@ -61,33 +60,32 @@ class App extends React.Component {
       });
     }
   };
- 
+
   render() {
     return (
-      
       <div className="grid-container">
         <header>
+      
           <a href="/">Search cars by model and year</a>
+       
         </header>
         <main>
           <div className="content">
             <div className="main">
               <Filter
                 count={this.state.cars.length}
-                model={this.state.model}
-                sort={this.state.sort}
                 filterCarsBymodel={this.filterCarsBymodel}
-                sortCarsBytimeLine={this.sortCarsBytimeLine}
+                sortCarsByYear={this.sortCarsByYear}
                 filterCarsByYear={this.filterCarsByYear}
               ></Filter>
               <Cars cars={this.state.cars}></Cars>
             </div>
-            {/* <div className="sidebar">Cart Items</div> */}
+            {/* <div className="sidebar">Cart Cars</div> */}
           </div>
         </main>
         <footer>All right is reserved.</footer>
+    
       </div>
-      
     );
   }
 }

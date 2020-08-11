@@ -1,28 +1,25 @@
 import React from "react";
 const Filter = ({
-  sortCarsBytimeLine,
+  sortCarsByYear,
   filterCarsBymodel,
   count,
-  model,
-  sort,
-  filterCarsByYear
+  filterCarsByYear,
 }) => {
   return (
     <div className="filter">
       <div className="filter-result">{count} Cars</div>
       <div className="filter-sort">
-        Sort by timeline{" "}
-        <select value={sort} onChange={sortCarsBytimeLine}>
-          <option>select</option>
+        Sort by Year{" "}
+        <select onChange={sortCarsByYear}>
+          <option value="">ALL</option>
           <option value="Old">Old</option>
           <option value="New">New</option>
         </select>
-       
       </div>
       <div className="filter-by-year">
-      Filter by Year{" "}
-        <select  onChange={filterCarsByYear}>
-          <option>select</option>
+        Filter by Year{" "}
+        <select onChange={filterCarsByYear}>
+          <option value="">ALL</option>
           <option value="2020">2020</option>
           <option value="2019">2019</option>
           <option value="2018">2018</option>
@@ -36,7 +33,7 @@ const Filter = ({
 
       <div className="filter-model">
         Filter cars by model{" "}
-        <select value={model} onChange={filterCarsBymodel}>
+        <select onChange={filterCarsBymodel}>
           <option value="">ALL</option>
           <option value="OPEL">Opel</option>
           <option value="SEAT">seat</option>

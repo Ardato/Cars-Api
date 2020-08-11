@@ -1,9 +1,11 @@
 import React from "react";
 import formatCurrency from "../util";
+import Zoom from "react-reveal/Zoom"
 
 const Cars = ({ cars }) => {
   return (
     <div>
+       <Zoom  cascade ={true}> 
       <ul className="cars">
         {cars.map((car) => (
           <li key={car.model}>
@@ -20,6 +22,7 @@ const Cars = ({ cars }) => {
           </li>
         ))}
       </ul>
+      </Zoom>
     </div>
   );
 };
