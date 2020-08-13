@@ -2,12 +2,12 @@ import React from "react";
 const Filter = ({
   sortCarsByYear,
   filterCarsBymodel,
-  count,
+  filteredData,
   filterCarsByYear,
 }) => {
   return (
     <div className="filter">
-      <div className="filter-result">{count} Cars</div>
+      <div className="filter-result">{filteredData} Cars</div>
       <div className="filter-sort">
         Sort by Year{" "}
         <select onChange={sortCarsByYear}>

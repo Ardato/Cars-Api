@@ -1,93 +1,95 @@
-import React from "react";
-import data from "./data.json";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Cars from "./components/Cars";
 import Filter from "./components/Filter";
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      cars: data.cars,
-      model: "",
-      sort: "",
-      Year: "",
-    };
-  }
-  sortCarsByYear = (event) => {
+
+const App = () => {
+  useEffect(() => {
+    axios.get("/api/cars").then((response) => {setCars(response.data);setFilteredData(response.data)})
+       
+    
+
+    
+  }, []);
+
+
+
+  const [cars, setCars] = useState([]);
+  const [model, setModel] = useState("");
+  const [sort, setSort] = useState("");
+  const [year, setYear] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+
+  const sortCarsByYear = (event) => {
     const sort = event.target.value;
     //console.log(event.target.value);
-    this.setState(() => ({
-      sort,
-      cars: this.state.cars
-        .slice()
-        .sort((a, b) =>
-          sort === "Old"
-            ? a.Year > b.Year
-              ? 1
-              : -1
-            : sort === "New"
-            ? a.Year < b.Year
-              ? 1
-              : -1
-            : a._id < b._id
+    setSort(sort);
+    setCars(
+      cars.sort((a, b) =>
+        sort === "Old"
+          ? a.Year > b.Year
             ? 1
             : -1
-        ),
-    }));
+          : sort === "New"
+          ? a.Year < b.Year
+            ? 1
+            : -1
+          : a._id < b._id
+          ? 1
+          : -1
+      )
+    );
   };
-  filterCarsBymodel = (event) => {
-    // console.log(event.target.value)
+
+  const filterCarsBymodel = (event) => {
+    console.log(event.target.value);
     if (event.target.value === "") {
-      this.setState({ model: event.target.value, cars: data.cars });
+      setModel(event.target.value);
+      setCars(cars);
     } else {
-      this.setState({
-        model: event.target.value,
-        cars: data.cars.filter(
+      setModel(event.target.value);
+      setFilteredData(
+        cars.filter(
           (car) => car.availableModel.indexOf(event.target.value) >= 0
-        ),
-      });
-    }
-  };
-  filterCarsByYear = (event) => {
-    // console.log(event.target.value)
-    if (event.target.value === "") {
-      this.setState({ Year: event.target.value, cars: data.cars });
-    } else {
-      this.setState({
-        Year: event.target.value,
-        cars: data.cars.filter(
-          (car) => car.Year.indexOf(event.target.value) >= 0
-        ),
-      });
+        )
+      );
     }
   };
 
-  render() {
-    return (
-      <div className="grid-container">
-        <header>
-      
-          <a href="/">Search cars by model and year</a>
-       
-        </header>
-        <main>
-          <div className="content">
-            <div className="main">
-              <Filter
-                count={this.state.cars.length}
-                filterCarsBymodel={this.filterCarsBymodel}
-                sortCarsByYear={this.sortCarsByYear}
-                filterCarsByYear={this.filterCarsByYear}
-              ></Filter>
-              <Cars cars={this.state.cars}></Cars>
-            </div>
-            {/* <div className="sidebar">Cart Cars</div> */}
+  const filterCarsByYear = (event) => {
+    if (event.target.value === "") {
+      setYear(event.target.value);
+      setCars(cars);
+    } else {
+      setYear(event.target.value);
+      setFilteredData(
+        cars.filter((car) => car.year.indexOf(event.target.value) >= 0)
+      );
+    }
+  };
+
+  return (
+    <div className="grid-container">
+      <header>
+        <a href="/">Search cars by model and year</a>
+      </header>
+      <main>
+        <div className="content">
+          <div className="main">
+            <Filter
+              filteredData={filteredData.length}
+              filterCarsBymodel={filterCarsBymodel}
+              sortCarsByYear={sortCarsByYear}
+              filterCarsByYear={filterCarsByYear}
+            ></Filter>
+            <Cars filteredData={filteredData}></Cars>
           </div>
-        </main>
-        <footer>All right is reserved.</footer>
-    
-      </div>
-    );
-  }
-}
+          {/* <div className="sidebar">Cart Cars</div> */}
+        </div>
+      </main>
+      <footer>All right is reserved.</footer>
+    </div>
+  );
+};
 
 export default App;

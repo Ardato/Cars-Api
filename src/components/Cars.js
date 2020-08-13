@@ -2,18 +2,18 @@ import React from "react";
 import formatCurrency from "../util";
 import Zoom from "react-reveal/Zoom"
 
-const Cars = ({ cars }) => {
+const Cars = ({filteredData}) => {
   return (
     <div>
        <Zoom  cascade ={true}> 
       <ul className="cars">
-        {cars.map((car) => (
+        {filteredData.map((car) => (
           <li key={car.model}>
             <div className="car">
               <a href={"#" + car._id}>
                 <img src={car.image} alt={car.model}></img>
                 <p>{car.model}</p>
-                <p>Year : {car.Year}</p>
+                <p>Year : {car.year}</p>
               </a>
               <div className="car-price">
                 <div>Price:{formatCurrency(car.price)}</div>
